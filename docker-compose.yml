@@ -17,8 +17,10 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
+    ports:
+      - "8123:8123"
     privileged: true
-    network_mode: host
+
 
 volumes:
   portainer_data:
